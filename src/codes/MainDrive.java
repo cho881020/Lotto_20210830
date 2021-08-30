@@ -139,6 +139,34 @@ public class MainDrive {
 //		}
 		
 		
+//		당첨번호들을 작은 숫자 ~ 큰 숫자대로 정렬. (Bubble sort 활용)
+		
+//		큰 for : 총 6번 반복 (모든 숫자에 대해 정렬 되게)
+		
+		for (int i = 0 ; i < winNumbers.length ; i++) {
+			
+//			작은 for : 두개의 변수를 찍어서 순서를 바꿔야하는지? 판단 -> 바꿔주는 for
+			
+//			j+1 번칸 접근 : j=5가 대입되면, 배열[6] 접근. 없는 칸 접근 에러. 4까지만 돌도록.
+			for (int j=0 ; j< winNumbers.length-1 ; j++) {
+				
+//				지금 보는 j번째 숫자와, 그 다음숫자인 j+1번째 숫자가 순서가 반대로 잡혀있나?
+				if (winNumbers[j] > winNumbers[j+1]) {
+					
+//					잘못된 순서다 : 둘의 적힌 값을 바꿔주자. (순서 보정)
+					
+					int backUp = winNumbers[j];
+					
+					winNumbers[j] = winNumbers[j+1];
+					winNumbers[j+1] = backUp;
+					
+				}
+				
+			}
+			
+		}
+		
+		
 //		만들어진 당첨번호들 출력
 		for (int winNum  : winNumbers) {
 			
