@@ -164,6 +164,9 @@ public class MainDrive {
 //			winNumbers[i] = i+1;
 //		}
 		
+//		임시 : 보너스번호를 7로 고정.
+//		bonusNum = 7;
+		
 		
 //		당첨번호들을 작은 숫자 ~ 큰 숫자대로 정렬. (Bubble sort 활용)
 		
@@ -199,6 +202,10 @@ public class MainDrive {
 			System.out.println(winNum);
 			
 		}
+		
+		
+//		보너스 번호도 출력
+		System.out.println("보너스 번호 : " + bonusNum);
 		
 		
 //		나는 몇등인지? 판단.
