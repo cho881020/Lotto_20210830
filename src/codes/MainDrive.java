@@ -84,7 +84,45 @@ public class MainDrive {
 			}
 
 		}
+		
+		
+//		입력 모두 완료. => 당첨번호 6개 생성.
+		
+//		6개 숫자 배열.
+		int[] winNumbers = new int[6];
+		
+//		6개의 숫자를 대입. => 검사를 통과한 숫자가 나올때까지 대입.
+		
+		for (int i=0 ; i < winNumbers.length ; i++) {
+			
+			while (true) {
+				
+//				1~45의 숫자를 컴퓨터가 랜덤으로 추출.
+				
+//				애초에 1~45 추출 : 범위검사는 필요 없다.
+				
+//				당첨번호목록에 중복인지는 확인해야함.
+				boolean isDuplOk = true;
+				
+				if (isDuplOk) {
+					
+//					중복검사만 통과해도, 다음 숫자 뽑으러 가자.
+					break;
+				}
+			}
+			
+		}
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
