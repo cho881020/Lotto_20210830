@@ -131,6 +131,60 @@ public class MainDrive {
 			}
 			
 		}
+		
+		
+//		만들어진 당첨번호들 출력
+		for (int winNum  : winNumbers) {
+			
+			System.out.println(winNum);
+			
+		}
+		
+		
+//		나는 몇등인지? 판단.
+//		맞춘 숫자의 갯수를 구해야함.
+		int correctNumCount = 0;
+		
+//		내 번호 둘러보기 + 당첨번호 둘러보기 => 반복문 중첩.
+		
+		for (int myNum  : inputNumbers) {
+			
+//			내 번호 하나 => 당첨번호 6개 둘러보기.
+			
+			for (int winNum :  winNumbers) {
+				
+//				내 번호 하나와 / 당첨번호들 중 같은게 있는가?
+				if (myNum == winNum) {
+					
+//					숫자 하나를 더 맞췄다.
+					correctNumCount++;
+					
+				}
+				
+			}
+			
+		}
+		
+//		맞춘 갯수가 변수에 저장되어있다.
+//		몇개냐에 따라 다른 등수 출력.
+		
+		if (correctNumCount == 6) {
+			System.out.println("1등 - 10억");
+		}
+		else if (correctNumCount == 5) {
+			System.out.println("3등 - 2백만원");
+		}
+		else if (correctNumCount == 4) { 
+			System.out.println("4등 - 5만원");
+		}
+		else if (correctNumCount == 3) {
+			System.out.println("5등 - 5천원");
+		}
+		else {
+			System.out.println("낙첨");
+		}
+		
+		
 
 	}
 
