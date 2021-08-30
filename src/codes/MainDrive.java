@@ -34,8 +34,21 @@ public class MainDrive {
 				boolean isRangeOk =  (1 <= num) && (num <= 45) ;
 				
 //				2. 중복 검사.
+//				6개의 숫자 저장할 배열에 => 지금 입력한 num가 이미 들어있나?
+//				6칸 배열에 적힌 값을 모두 꺼내봤을때 -> num와 같은게 하나라도 있는가?
+//				일단 써도 괜찮다 => 같은 숫자를 찾으면 : 쓰면 안된다고 변경.
 				
 				boolean isDuplOk = true;
+				
+//				입력 숫자 목록 조회 => 배열 내부 값 : for-each
+				for ( int input   : inputNumbers ) {
+					
+//					지금 입력한 num과, 배열에서 꺼내온 input이 같은가?
+					if (num == input) {
+						
+					}
+					
+				}
 				
 //				검사를 둘다 통과했다면? 다음 숫자 입력받으러. => while 무한반복을 깨주자.
 				if ( isRangeOk && isDuplOk ) {
