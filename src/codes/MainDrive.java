@@ -232,7 +232,25 @@ public class MainDrive {
 			System.out.println("1등 - 10억");
 		}
 		else if (correctNumCount == 5) {
-			System.out.println("3등 - 2백만원");
+			
+//			추가 검사 필요. 보너스번호를 맞췄는가?
+//			못맞췄다고 전제. => 내가 입력한 번호들 중, 보너스번호와 같은게 있다? => 맞췄다고 세팅.
+			
+			boolean isBonusCorrect = false;
+			
+			for (int myNum : inputNumbers) {
+				if (myNum == bonusNum) {
+					isBonusCorrect = true;
+					break;
+				}
+			}
+			
+			if (isBonusCorrect) {
+				System.out.println("2등 - 4천만원");
+			}
+			else {
+				System.out.println("3등 - 2백만원");	
+			}
 		}
 		else if (correctNumCount == 4) { 
 			System.out.println("4등 - 5만원");
