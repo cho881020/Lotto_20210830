@@ -28,8 +28,19 @@ public class MainDrive {
 				
 //				입력한 num에 대한 검사 수행.
 				
-//				검사를 통과했다면? 다음 숫자 입력받으러. => while 무한반복을 깨주자.
-				if (false) {
+//				1. 숫자 범위 (1~45) 검사.
+				
+				boolean isRangeOk = true;
+				
+//				2. 중복 검사.
+				
+				boolean isDuplOk = true;
+				
+//				검사를 둘다 통과했다면? 다음 숫자 입력받으러. => while 무한반복을 깨주자.
+				if ( isRangeOk && isDuplOk ) {
+					
+//					범위 / 중복 모두 통과한 상황.
+					
 					break;
 				}
 				else {
