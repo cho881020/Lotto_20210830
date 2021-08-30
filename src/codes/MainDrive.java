@@ -67,7 +67,18 @@ public class MainDrive {
 				}
 				else {
 //					검사 통과 실패 : 다시 입력해달라는 안내.
-					System.out.println("잘못된 숫자입니다. 다시 입력 해주세요.");
+					
+//					어떤 부분이 잘못되었는지도 안내.
+					if (!isRangeOk) {
+//						범위검사 탈락.
+						System.out.println("1~45의 숫자만 입력가능합니다.");
+					}
+					else {
+//						범위검사 OK. 중복검사 탈락해서 실패.
+						System.out.println("이미 입력한 숫자입니다.");
+					}
+					
+					System.out.println("다시 입력 해주세요.");
 				}
 				
 			}
