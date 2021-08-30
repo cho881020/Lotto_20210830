@@ -133,6 +133,12 @@ public class MainDrive {
 		}
 		
 		
+//		임시 : 당첨번호를 1,2,3,4,5,6 으로 고정.
+//		for (int i=0 ; i < winNumbers.length ; i++) {
+//			winNumbers[i] = i+1;
+//		}
+		
+		
 //		만들어진 당첨번호들 출력
 		for (int winNum  : winNumbers) {
 			
