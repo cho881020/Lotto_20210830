@@ -133,6 +133,32 @@ public class MainDrive {
 		}
 		
 		
+//		보너스 번호도 만들자. => 1개만 만들자.
+		int bonusNum = 0;
+		
+//		만드는 로직.
+//		1~45사이의 랜덤 숫자. + 당첨번호 중복 X.
+		while (true) {
+			
+			int randomNum = (int) (Math.random() * 45 +1);
+			
+			boolean isDuplOk = true;
+			
+			for (int num : winNumbers) {
+				if (num == randomNum) {
+					isDuplOk = false;
+					break;
+				}
+			}
+			
+			if (isDuplOk) {
+				bonusNum = randomNum;
+				break;
+			}
+			
+		}
+		
+		
 //		임시 : 당첨번호를 1,2,3,4,5,6 으로 고정.
 //		for (int i=0 ; i < winNumbers.length ; i++) {
 //			winNumbers[i] = i+1;
