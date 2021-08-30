@@ -45,7 +45,12 @@ public class MainDrive {
 					
 //					지금 입력한 num과, 배열에서 꺼내온 input이 같은가?
 					if (num == input) {
+//						같은 값을 찾았다! => 중복된 값을 발견!
+//						이 num는 더이상 중복검사 통과가 아님.
+						isDuplOk = false;
 						
+//						하나라도 같은값 찾으면, 중복 확정. 더 반복 필요 X
+						break;
 					}
 					
 				}
@@ -53,8 +58,11 @@ public class MainDrive {
 //				검사를 둘다 통과했다면? 다음 숫자 입력받으러. => while 무한반복을 깨주자.
 				if ( isRangeOk && isDuplOk ) {
 					
-//					범위 / 중복 모두 통과한 상황.
+//					범위 / 중복 모두 통과한 상황. => 이 num는 입력값으로 등록해도 됨.
 					
+					inputNumbers[i] = num;
+					
+//					제대로 된 입력 OK. => 다음 숫자 입력. 무한반복 탈출.
 					break;
 				}
 				else {
