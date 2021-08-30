@@ -99,12 +99,31 @@ public class MainDrive {
 				
 //				1~45의 숫자를 컴퓨터가 랜덤으로 추출.
 				
+//				Math.random() => 0.0 ~ 0.99999999999 사이의 랜덤값을 추출.
+//				Math.random() * 45 => 0.0 ~ 44.999999 사이의 랜덤값으로 계산됨.
+//				(int) (Math.random() * 45) + 1 => 1 ~ 45 사이의 랜덤값으로 계산됨.
+				
+				int randomNum =  (int) (Math.random()*45) + 1;
+				
 //				애초에 1~45 추출 : 범위검사는 필요 없다.
 				
 //				당첨번호목록에 중복인지는 확인해야함.
 				boolean isDuplOk = true;
 				
+//				당첨번호를 모두 꺼내보자. -> 지금 뽑아낸 randomNum와 같은게 있는가?
+				for (int winNum  : winNumbers) {
+					if (randomNum  ==  winNum) {
+//						같은 숫자 발견! 중복 확인! => 중복검사 통과 X
+						isDuplOk = false;
+						
+						break;
+					}
+				}
+				
 				if (isDuplOk) {
+					
+//					당첨번호 목록에 랜덤 숫자 대입.
+					winNumbers[i] = randomNum;
 					
 //					중복검사만 통과해도, 다음 숫자 뽑으러 가자.
 					break;
