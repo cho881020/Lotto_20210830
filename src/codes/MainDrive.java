@@ -29,8 +29,9 @@ public class MainDrive {
 //				입력한 num에 대한 검사 수행.
 				
 //				1. 숫자 범위 (1~45) 검사.
+//				질문사항 : 1보다 크거나 같은?  AND  45보다 작거나 같은가?
 				
-				boolean isRangeOk = true;
+				boolean isRangeOk =  (1 <= num) && (num <= 45) ;
 				
 //				2. 중복 검사.
 				
